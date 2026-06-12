@@ -50,6 +50,7 @@ func AuthOptional(jwtSecret string) gin.HandlerFunc {
 		c.Set("user_id", claims.UserID)
 		c.Set("user_email", claims.Email)
 		c.Set("user_role", claims.Role)
+		c.Set("username", claims.Username)
 		c.Next()
 	}
 }

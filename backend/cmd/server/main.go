@@ -52,7 +52,7 @@ func main() {
 			log.Fatalf("Failed to hash admin password: %v", err)
 		}
 		admin := &model.User{
-			Username:     "管理员",
+			Username:     "Admin",
 			Email:        cfg.AdminEmail,
 			PasswordHash: hash,
 			Role:         model.RoleAdmin,

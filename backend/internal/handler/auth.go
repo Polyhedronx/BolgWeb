@@ -52,7 +52,7 @@ func (h *AuthHandler) Register(c *gin.Context) {
 		return
 	}
 
-	token, err := auth.GenerateToken(h.jwtSecret, user.ID, user.Email, user.Role)
+	token, err := auth.GenerateToken(h.jwtSecret, user.ID, user.Email, user.Role, user.Username)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "生成令牌失败"})
 		return
@@ -88,7 +88,7 @@ func (h *AuthHandler) Login(c *gin.Context) {
 		return
 	}
 
-	token, err := auth.GenerateToken(h.jwtSecret, user.ID, user.Email, user.Role)
+	token, err := auth.GenerateToken(h.jwtSecret, user.ID, user.Email, user.Role, user.Username)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "生成令牌失败"})
 		return

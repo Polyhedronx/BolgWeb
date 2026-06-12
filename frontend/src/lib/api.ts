@@ -66,11 +66,12 @@ export async function searchPosts(query: string): Promise<SearchResults> {
 
 // Comments
 export async function getComments(
-  postSlug: string
-): Promise<{ comments: Comment[] }> {
-  return fetchJSON<{ comments: Comment[] }>(
-    `${API_BASE}/comments?post_slug=${encodeURIComponent(postSlug)}`
-  );
+  postSlug: string,
+  sort?: string
+): Promise<{ comments: Comment[]; user_votes: Record<number, string> }> {
+  const qs = new URLSearchParams({ post_slug: postSlug });
+  if (sort) qs.set("sort", sort);
+  return fetchJSON(`${API_BASE}/comments?${qs}`);
 }
 
 export async function createComment(
@@ -80,5 +81,22 @@ export async function createComment(
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
+  });
+}
+
+export async function voteComment(
+  id: number,
+  voteType: "up" | "down"
+): Promise<{ comment: Comment }> {
+  return fetchJSON(`${API_BASE}/comments/${id}/vote`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ vote_type: voteType }),
+  });
+}
+
+export async function deleteComment(id: number): Promise<void> {
+  return fetchJSON(`${API_BASE}/comments/${id}`, {
+    method: "DELETE",
   });
 }

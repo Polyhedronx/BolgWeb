@@ -34,9 +34,12 @@ export interface Comment {
   post_slug: string;
   author_name: string;
   author_email?: string;
+  author_id?: number | null;
   content: string;
   parent_id?: number | null;
   is_approved: boolean;
+  upvote_count: number;
+  downvote_count: number;
   created_at: string;
   updated_at: string;
   children?: Comment[];
@@ -45,8 +48,6 @@ export interface Comment {
 // Comment form data
 export interface CreateCommentRequest {
   post_slug: string;
-  author_name: string;
-  author_email?: string;
   content: string;
   parent_id?: number | null;
 }

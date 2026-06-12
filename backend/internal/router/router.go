@@ -26,7 +26,7 @@ func Setup(
 		c.JSON(200, gin.H{"status": "ok"})
 	})
 
-	// API v1 — 所有路由附带可选认证（有 token 则解析，无则跳过）
+	// API v1 — 所有路由附带可选认证
 	v1 := r.Group("/api/v1")
 	v1.Use(middleware.AuthOptional(jwtSecret))
 	{
@@ -46,9 +46,26 @@ func Setup(
 		// Search
 		v1.GET("/search", searchHandler.Search)
 
-		// Comments
+		// Comments (read is public; write needs auth)
 		v1.GET("/comments", commentHandler.GetComments)
-		v1.POST("/comments", commentHandler.CreateComment)
+
+		commentAuth := v1.Group("")
+		commentAuth.Use(middleware.AuthRequired(jwtSecret))
+		{
+			commentAuth.POST("/comments", commentHandler.CreateComment)
+			commentAuth.POST("/comments/:id/vote", commentHandler.VoteComment)
+			commentAuth.DELETE("/comments/:id", commentHandler.DeleteOwnComment)
+		}
+
+		// Admin
+		admin := v1.Group("/admin")
+		admin.Use(middleware.AuthRequired(jwtSecret), middleware.RequireRole("admin"))
+		{
+			admin.DELETE("/comments/:id", commentHandler.AdminDeleteComment)
+			admin.GET("/comments/pending", commentHandler.GetPendingComments)
+			admin.POST("/comments/:id/approve", commentHandler.ApproveComment)
+			admin.POST("/comments/:id/reject", commentHandler.RejectComment)
+		}
 
 		// RSS & Sitemap
 		v1.GET("/rss", rssHandler.GetRSS)

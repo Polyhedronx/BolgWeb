@@ -29,14 +29,14 @@ export default function PostCard({ post }: PostCardProps) {
         to={postUrl(post)}
         className="no-underline hover:underline decoration-[var(--color-accent)] underline-offset-4"
       >
-        <h2 className="text-xl font-semibold text-[var(--color-primary)] mb-2 leading-snug">
+        <h2 className="text-xl font-semibold text-[var(--color-primary)] mb-2 leading-snug break-words">
           {post.title}
         </h2>
       </Link>
 
       {/* Description */}
       {post.description && (
-        <p className="text-sm text-[var(--color-muted)] leading-relaxed mb-4">
+        <p className="text-sm text-[var(--color-muted)] leading-relaxed mb-4 break-words">
           {post.description}
         </p>
       )}

@@ -38,7 +38,7 @@ export default function Header({ onOpenDrawer }: HeaderProps) {
                 placeholder="搜索文章..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-40 sm:w-48 pl-8 pr-3 py-1.5 text-sm rounded-md border border-[var(--color-border)] bg-[var(--color-bg)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/30 transition-all"
+                className="w-28 xs:w-36 sm:w-48 pl-8 pr-3 py-1.5 text-sm rounded-md border border-[var(--color-border)] bg-[var(--color-bg)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/30 transition-all"
               />
             </div>
           </form>

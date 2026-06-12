@@ -71,7 +71,7 @@ export default function CommentItem({
             </span>
           </div>
 
-          <p className="comment-body text-sm text-[var(--color-primary)] mb-1.5 whitespace-pre-wrap">
+          <p className="comment-body text-sm text-[var(--color-primary)] mb-1.5 whitespace-pre-wrap break-words">
             {comment.content}
           </p>
 

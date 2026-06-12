@@ -57,7 +57,7 @@ export default function PostPage() {
         <meta name="description" content={post.description} />
       </Helmet>
 
-      <article>
+      <article className="min-w-0">
         {/* Back link */}
         <button
           onClick={() => navigate(-1)}

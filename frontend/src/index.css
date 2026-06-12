@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+/* ---- Design tokens ---- */
+@theme {
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-primary: #1a1a2e;
+  --color-accent: #e94560;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+}
+
+/* ---- Reset & base ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* 始终预留滚动条空间，防止页面间内容左右偏移 */
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  font-family: "Inter", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Blog prose (article content) ---- */
+.prose {
+  max-width: none;
+}
+.prose pre {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+.prose code {
+  font-size: 0.875rem;
+}
+.prose :not(pre) > code {
+  background-color: #f1f5f9;
+  color: #334155;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-family: ui-monospace, Consolas, monospace;
+}
+.prose img {
+  border-radius: 0.5rem;
+}
+.prose a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-decoration-color: #93c5fd;
+}
+.prose a:hover {
+  color: #1e40af;
+}
+.prose blockquote {
+  border-left: 4px solid #d1d5db;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #4b5563;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.prose th,
+.prose td {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+.prose th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  scroll-margin-top: 5rem;
+}

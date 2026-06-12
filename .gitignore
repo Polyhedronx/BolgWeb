@@ -4,6 +4,7 @@
 # Go
 backend/tmp/
 backend/bin/
+backend/server.exe
 
 # Node
 node_modules/

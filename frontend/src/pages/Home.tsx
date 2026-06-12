@@ -20,6 +20,7 @@ export default function Home() {
   const page = Number(searchParams.get("page") || "1");
   const query = searchParams.get("q") || "";
   const category = searchParams.get("category") || "";
+  const tag = searchParams.get("tag") || "";
 
   // 搜索模式
   const searchQuery = useQuery({
@@ -30,19 +31,23 @@ export default function Home() {
 
   // 文章列表（支持分类 + 标签过滤）
   const postsQuery = useQuery({
-    queryKey: ["posts", { page, category }],
-    queryFn: () => getPosts({ page, limit: 10, category: category || undefined }),
+    queryKey: ["posts", { page, category, tag }],
+    queryFn: () => getPosts({ page, limit: 10, category: category || undefined, tag: tag || undefined }),
     enabled: !query,
   });
 
   const selectCategory = (cat: string) => {
-    setSearchParams(cat ? { category: cat } : {});
+    const params: Record<string, string> = {};
+    if (cat) params.category = cat;
+    if (tag) params.tag = tag;
+    setSearchParams(params);
   };
 
   const handlePageChange = (newPage: number) => {
     const params: Record<string, string> = { page: String(newPage) };
     if (query) params.q = query;
     if (category) params.category = category;
+    if (tag) params.tag = tag;
     setSearchParams(params);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

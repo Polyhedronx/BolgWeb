@@ -10,8 +10,6 @@ import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import Home from "@/pages/Home";
 
 const PostPage = lazy(() => import("@/pages/Post"));
-const TagsPage = lazy(() => import("@/pages/Tags"));
-const TagPostsPage = lazy(() => import("@/pages/TagPosts"));
 const LoginPage = lazy(() => import("@/pages/Login"));
 const RegisterPage = lazy(() => import("@/pages/Register"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
@@ -39,14 +37,9 @@ export default function App() {
               <Routes>
                 <Route element={<Layout />}>
                   <Route path="/" element={<Home />} />
-                  {/* 分类前缀路由 */}
                   <Route path="/tech/:slug" element={<PostPage />} />
                   <Route path="/essay/:slug" element={<PostPage />} />
                   <Route path="/daily/:year/:month/:dateSlug" element={<PostPage />} />
-                  {/* 标签 */}
-                  <Route path="/tags" element={<TagsPage />} />
-                  <Route path="/tags/:tag" element={<TagPostsPage />} />
-                  {/* 认证 */}
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/register" element={<RegisterPage />} />
                   <Route path="*" element={<NotFound />} />

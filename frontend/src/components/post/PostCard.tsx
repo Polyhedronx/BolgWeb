@@ -47,7 +47,7 @@ export default function PostCard({ post }: PostCardProps) {
           {post.tags.map((tag) => (
             <Link
               key={tag}
-              to={`/tags/${encodeURIComponent(tag)}`}
+              to={`/?tag=${encodeURIComponent(tag)}`}
               className="text-xs px-2 py-0.5 rounded-full bg-[var(--color-bg)] text-[var(--color-muted)] border border-[var(--color-border)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors no-underline"
             >
               {tag}

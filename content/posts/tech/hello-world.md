@@ -1,10 +1,10 @@
 ---
-title: "Hello World — 我的第一篇博客"
+title: "Hello World"
 date: "2026-06-11"
 tags: ["博客", "技术"]
 category: "技术"
 slug: "hello-world"
-description: "这是我的个人博客的第一篇文章，介绍这个博客的技术栈和搭建过程。"
+description: "这是我的个人博客的第一篇正式文章，介绍这个博客的技术栈和搭建过程。"
 ---
 
 ## 欢迎来到我的博客

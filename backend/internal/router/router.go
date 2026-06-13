@@ -3,8 +3,8 @@ package router
 import (
 	"path/filepath"
 
-	"bolgweb/internal/handler"
-	"bolgweb/internal/middleware"
+	"blogweb/internal/handler"
+	"blogweb/internal/middleware"
 
 	"github.com/gin-gonic/gin"
 )

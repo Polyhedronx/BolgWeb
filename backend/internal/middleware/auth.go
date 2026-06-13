@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"bolgweb/internal/auth"
+	"blogweb/internal/auth"
 
 	"github.com/gin-gonic/gin"
 )

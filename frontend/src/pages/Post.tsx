@@ -26,7 +26,7 @@ export default function PostPage() {
     return (
       <>
         <Helmet>
-          <title>{isPremium ? "高级用户专享" : "文章未找到"} - Bolg</title>
+          <title>{isPremium ? "高级用户专享" : "文章未找到"} - Blog</title>
         </Helmet>
         <div className="text-center py-16">
           <h1 className="text-2xl font-bold mb-4">
@@ -64,21 +64,21 @@ export default function PostPage() {
     description: post.description,
     datePublished: post.date,
     url: canonicalUrl,
-    author: { "@type": "Person", name: "Bolg" },
+    author: { "@type": "Person", name: "Blog" },
     ...(post.tags.length > 0 && { keywords: post.tags.join(", ") }),
   };
 
   return (
     <>
       <Helmet>
-        <title>{post.title} - Bolg</title>
+        <title>{post.title} - Blog</title>
         <meta name="description" content={post.description} />
         {/* OpenGraph */}
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:site_name" content="Bolg" />
+        <meta property="og:site_name" content="Blog" />
         <meta property="og:locale" content="zh_CN" />
         <meta property="article:published_time" content={post.date} />
         {post.tags.map((tag) => (

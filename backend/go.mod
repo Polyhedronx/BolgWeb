@@ -1,4 +1,4 @@
-module bolgweb
+module blogweb
 
 go 1.25
 

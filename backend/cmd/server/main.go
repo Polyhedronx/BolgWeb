@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"log"
 
-	"bolgweb/internal/auth"
-	"bolgweb/internal/config"
-	"bolgweb/internal/handler"
-	"bolgweb/internal/model"
-	"bolgweb/internal/repository"
-	"bolgweb/internal/router"
-	"bolgweb/internal/service"
+	"blogweb/internal/auth"
+	"blogweb/internal/config"
+	"blogweb/internal/handler"
+	"blogweb/internal/model"
+	"blogweb/internal/repository"
+	"blogweb/internal/router"
+	"blogweb/internal/service"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -80,7 +80,7 @@ func main() {
 	rssHandler := handler.NewRSSHandler(
 		postService,
 		"http://localhost",
-		"Bolg 博客",
+		"Blog 博客",
 		"一个专注于技术与生活的个人博客",
 	)
 	authHandler := handler.NewAuthHandler(userRepo, cfg.JWTSecret)

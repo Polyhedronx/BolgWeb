@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"bolgweb/internal/model"
-	"bolgweb/internal/service"
+	"blogweb/internal/model"
+	"blogweb/internal/service"
 
 	"github.com/gin-gonic/gin"
 )

@@ -27,7 +27,7 @@ export default function LoginPage() {
 
   return (
     <>
-      <Helmet><title>登录 - Bolg</title></Helmet>
+      <Helmet><title>登录 - Blog</title></Helmet>
       <div className="max-w-sm mx-auto py-16">
         <h1 className="text-2xl font-bold mb-8 text-center">登录</h1>
 

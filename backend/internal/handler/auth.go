@@ -3,9 +3,9 @@ package handler
 import (
 	"net/http"
 
-	"bolgweb/internal/auth"
-	"bolgweb/internal/model"
-	"bolgweb/internal/repository"
+	"blogweb/internal/auth"
+	"blogweb/internal/model"
+	"blogweb/internal/repository"
 
 	"github.com/gin-gonic/gin"
 )

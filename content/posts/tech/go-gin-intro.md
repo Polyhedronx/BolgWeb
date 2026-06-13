@@ -1,6 +1,6 @@
 ---
 title: "Go + Gin 构建 RESTful API 入门"
-date: "2026-06-10"
+date: "2026-06-12"
 tags: ["Go", "Gin", "后端"]
 category: "技术"
 slug: "go-gin-intro"

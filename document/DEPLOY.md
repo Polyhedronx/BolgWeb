@@ -11,7 +11,7 @@
 | `DB_NAME` | `blog` | 数据库名 |
 | `SERVER_PORT` | `8080` | 后端端口 |
 | `CONTENT_PATH` | `./content` | 文章目录 |
-| `ADMIN_EMAIL` | `admin@bolg.com` | 管理员邮箱 |
+| `ADMIN_EMAIL` | `admin@blog.com` | 管理员邮箱 |
 | `ADMIN_PASSWORD` | `admin123` | 管理员初始密码（首次启动生效） |
 | `JWT_SECRET` | `change-me` | JWT 签名密钥 |
 | `FRONTEND_PORT` | `80` | 前端端口 |

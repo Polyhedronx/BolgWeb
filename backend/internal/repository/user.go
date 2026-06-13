@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"bolgweb/internal/model"
+	"blogweb/internal/model"
 
 	"gorm.io/gorm"
 )

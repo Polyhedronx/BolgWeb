@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"bolgweb/internal/model"
+	"blogweb/internal/model"
 
 	"gopkg.in/yaml.v3"
 )

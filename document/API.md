@@ -164,7 +164,7 @@ Base URL: `http://localhost:8080/api/v1`
 
 ```json
 // Request
-{ "email": "admin@bolg.com", "password": "admin123" }
+{ "email": "admin@blog.com", "password": "admin123" }
 
 // 200
 { "token": "eyJ...", "user": { "id": 1, "username": "Admin", "email": "...", "role": "admin" } }

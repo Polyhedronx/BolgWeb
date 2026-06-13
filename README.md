@@ -1,4 +1,4 @@
-# BolgWeb
+# BlogWeb
 
 一个使用 **React + Go + PostgreSQL** 构建的个人博客网站，通过 Docker Compose 一键部署。
 
@@ -30,8 +30,8 @@
 
 ```bash
 # 克隆项目
-git clone <your-repo-url> bolgweb
-cd bolgweb
+git clone <your-repo-url> blogweb
+cd blogweb
 
 # 复制环境变量（可选，默认值已可用）
 cp .env.example .env
@@ -82,7 +82,7 @@ description: "文章摘要"
 ## 项目结构
 
 ```
-BolgWeb/
+BlogWeb/
 ├── docker-compose.yml       # 一键部署
 ├── content/posts/           # Markdown 文章
 ├── backend/                 # Go API 服务

@@ -32,7 +32,7 @@ export default function RegisterPage() {
 
   return (
     <>
-      <Helmet><title>注册 - Bolg</title></Helmet>
+      <Helmet><title>注册 - Blog</title></Helmet>
       <div className="max-w-sm mx-auto py-16">
         <h1 className="text-2xl font-bold mb-8 text-center">注册</h1>
 

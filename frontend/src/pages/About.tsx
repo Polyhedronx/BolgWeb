@@ -23,7 +23,7 @@ export default function AboutPage() {
     return (
       <>
         <Helmet>
-          <title>关于 - Bolg</title>
+          <title>关于 - Blog</title>
         </Helmet>
         <div className="text-center py-16">
           <h1 className="text-2xl font-bold mb-4">加载失败</h1>
@@ -40,7 +40,7 @@ export default function AboutPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: about.name || "Bolg",
+    name: about.name || "Blog",
     ...(about.bio && { description: about.bio }),
     url: `${siteUrl}/about`,
     ...(about.social_links.length > 0 && {
@@ -52,13 +52,13 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>{about.name ? `${about.name} - 关于 - Bolg` : "关于 - Bolg"}</title>
-        <meta name="description" content={about.bio || "关于 Bolg 博客"} />
-        <meta property="og:title" content={about.name || "关于 - Bolg"} />
+        <title>{about.name ? `${about.name} - 关于 - Blog` : "关于 - Blog"}</title>
+        <meta name="description" content={about.bio || "关于 Blog 博客"} />
+        <meta property="og:title" content={about.name || "关于 - Blog"} />
         <meta property="og:description" content={about.bio || ""} />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content={`${siteUrl}/about`} />
-        <meta property="og:site_name" content="Bolg" />
+        <meta property="og:site_name" content="Blog" />
         <meta property="og:locale" content="zh_CN" />
         <link rel="canonical" href={`${siteUrl}/about`} />
         <script type="application/ld+json">
@@ -87,13 +87,13 @@ export default function AboutPage() {
                 className="w-24 h-24 rounded-full object-cover border-2 border-[var(--color-border)]"
               />
             ) : (
-              <Avatar name={about.name || "Bolg"} size={96} className="w-24 h-24 text-2xl" />
+              <Avatar name={about.name || "Blog"} size={96} className="w-24 h-24 text-2xl" />
             )}
           </div>
 
           <div className="flex-1 text-center sm:text-left">
             <h1 className="text-2xl sm:text-3xl font-bold mb-2">
-              {about.name || "Bolg"}
+              {about.name || "Blog"}
             </h1>
             {about.bio && (
               <p className="text-[var(--color-muted)] mb-4">{about.bio}</p>

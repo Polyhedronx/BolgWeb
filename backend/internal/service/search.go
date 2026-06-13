@@ -4,7 +4,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"bolgweb/internal/model"
+	"blogweb/internal/model"
 )
 
 const snippetRadius = 80 // characters on each side of the match

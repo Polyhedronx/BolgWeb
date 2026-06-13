@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <>
       <Helmet>
-        <title>404 - Bolg</title>
+        <title>404 - Blog</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="text-center py-16">

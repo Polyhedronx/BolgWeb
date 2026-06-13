@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"bolgweb/internal/service"
+	"blogweb/internal/service"
 
 	"github.com/gin-gonic/gin"
 )

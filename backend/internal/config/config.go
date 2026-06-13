@@ -26,7 +26,7 @@ func Load() *Config {
 		DBPassword:    getEnv("DB_PASSWORD", "blog123"),
 		DBName:        getEnv("DB_NAME", "blog"),
 		ContentPath:   getEnv("CONTENT_PATH", "./content"),
-		AdminEmail:    getEnv("ADMIN_EMAIL", "admin@bolg.com"),
+		AdminEmail:    getEnv("ADMIN_EMAIL", "admin@blog.com"),
 		AdminPassword: getEnv("ADMIN_PASSWORD", "admin123"),
 		AdminUsername: getEnv("ADMIN_USERNAME", "Admin"),
 		AdminAvatar:   getEnv("ADMIN_AVATAR", ""),

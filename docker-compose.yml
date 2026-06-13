@@ -36,7 +36,7 @@ services:
       DB_NAME: ${DB_NAME:-blog}
       SERVER_PORT: ${SERVER_PORT:-8080}
       CONTENT_PATH: /app/content
-      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@bolg.com}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@blog.com}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin123}
       ADMIN_USERNAME: ${ADMIN_USERNAME:-Admin}
       ADMIN_AVATAR: ${ADMIN_AVATAR:-}

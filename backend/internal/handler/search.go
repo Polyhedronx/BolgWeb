@@ -3,8 +3,8 @@ package handler
 import (
 	"net/http"
 
-	"bolgweb/internal/model"
-	"bolgweb/internal/service"
+	"blogweb/internal/model"
+	"blogweb/internal/service"
 
 	"github.com/gin-gonic/gin"
 )

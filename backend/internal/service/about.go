@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"bolgweb/internal/model"
+	"blogweb/internal/model"
 
 	"gopkg.in/yaml.v3"
 )

@@ -3,8 +3,8 @@ package service
 import (
 	"strings"
 
-	"bolgweb/internal/model"
-	"bolgweb/internal/repository"
+	"blogweb/internal/model"
+	"blogweb/internal/repository"
 )
 
 // CommentService handles business logic for comments.

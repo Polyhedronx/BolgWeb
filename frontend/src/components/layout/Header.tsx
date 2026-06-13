@@ -19,13 +19,13 @@ export default function Header({ onOpenDrawer }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 bg-[var(--color-surface)]/80 backdrop-blur-md border-b border-[var(--color-border)]">
-      <div className="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link
           to="/"
           className="text-xl font-bold tracking-tight text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors no-underline"
         >
-          Bolg
+          Blog
         </Link>
 
         {/* Search + Settings */}

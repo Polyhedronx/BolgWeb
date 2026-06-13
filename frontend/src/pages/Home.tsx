@@ -59,7 +59,7 @@ export default function Home() {
     return (
       <div>
         <Helmet>
-          <title>搜索：{query} - Bolg</title>
+          <title>搜索：{query} - Blog</title>
           <meta name="robots" content="noindex, follow" />
         </Helmet>
         <div className="flex items-center gap-4 mb-8">
@@ -98,7 +98,7 @@ export default function Home() {
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Bolg",
+    name: "Blog",
     url: siteUrl,
     description: "个人博客 — 技术、随笔与日常思考",
     potentialAction: {
@@ -113,7 +113,7 @@ export default function Home() {
   const blogJsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "Bolg",
+    name: "Blog",
     url: siteUrl,
     description: "个人博客 — 技术、随笔与日常思考",
     inLanguage: "zh-CN",
@@ -122,13 +122,13 @@ export default function Home() {
   return (
     <div>
       <Helmet>
-        <title>Bolg</title>
+        <title>Blog</title>
         <meta name="description" content="个人博客 — 技术、随笔与日常思考" />
-        <meta property="og:title" content="Bolg" />
+        <meta property="og:title" content="Blog" />
         <meta property="og:description" content="个人博客 — 技术、随笔与日常思考" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
-        <meta property="og:site_name" content="Bolg" />
+        <meta property="og:site_name" content="Blog" />
         <meta property="og:locale" content="zh_CN" />
         <link rel="canonical" href={siteUrl} />
         <script type="application/ld+json">

@@ -18,7 +18,7 @@ export default function TagsPage() {
   return (
     <>
       <Helmet>
-        <title>标签 & 分类 - Bolg</title>
+        <title>标签 & 分类 - Blog</title>
       </Helmet>
 
       <div>
